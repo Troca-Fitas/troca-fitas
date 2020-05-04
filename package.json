@@ -1,0 +1,20 @@
+{
+  "name": "troca-fitas_tech4covid19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.0",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "bootstrap-scss": "^4.4.1",
+    "jquery": "^3.5.0"
+  }
+}
