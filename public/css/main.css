@@ -7456,6 +7456,40 @@ header {
     .counters-container .logo img {
       width: 100%; }
 
+.login-container {
+  padding: 92px 0 119px 0;
+  background-color: #FFFFFF; }
+  @media (max-width: 767.98px) {
+    .login-container {
+      padding: 30px 0 40px 0; } }
+  .login-container h1,
+  .login-container p {
+    color: #080c2f; }
+  .login-container input[type="submit"] {
+    margin-top: 24px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #080c2f;
+    background-color: none;
+    padding: 13px 32px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    color: #080c2f; }
+    .login-container input[type="submit"]:hover {
+      border: 2px solid #4053d8;
+      color: #4053d8; }
+    .login-container input[type="submit"]:active {
+      border: 2px solid #4053d8;
+      color: #4053d8; }
+
 footer {
   bottom: 0;
   position: relative;
