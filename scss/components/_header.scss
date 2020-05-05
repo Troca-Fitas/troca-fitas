@@ -1,0 +1,40 @@
+//Header
+header {
+    position: relative;
+    padding-top: 40px;
+    width: 100%;
+  
+    .align-btns {
+      padding-top: 14px;
+    }
+  
+    .hide {
+      display: none;
+    }
+  
+    nav {
+      p {
+        font-size: $font-size-smaller;
+        text-align: right;
+        letter-spacing: 1px;
+      }
+  
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 -15px;
+  
+        li {
+          margin: 0 15px;
+  
+          a {
+            @include text-button();
+  
+            &.secondary-button-outline-white {
+              @include secondary-button-outline-white();
+            }
+          }
+        }
+      }
+    }
+  }

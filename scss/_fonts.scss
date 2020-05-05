@@ -1,0 +1,101 @@
+$font-primary: 'Montserrat',
+Arial,
+sans-serif;
+
+@mixin font-regular {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+@mixin font-semi-bold {
+    font-family: $font-primary;
+    font-weight: 500;
+}
+
+@mixin font-bold {
+    font-family: $font-primary;
+    font-weight: 700;
+}
+
+@mixin font-extra-bold {
+    font-family: $font-primary;
+    font-weight: 900;
+}
+
+// - Font sizes
+$font-size-smaller: 12px;
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-medium: 18px;
+$font-size-big: 24px;
+
+$font-size-headline-primary: 30px;
+$font-size-headline-primary-large: 42px;
+$font-size-headline-component: 30px;
+$font-size-headline-component-large: 35px;
+$font-size-table-header: 25px;
+$font-size-final-output: 22px;
+
+// - Line heights
+$line-height-factor-base: 1.5;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 96px;
+    line-height: 96px;
+    @include font-extra-bold();
+    color: $c-white;
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 66px;
+        line-height: 66px;
+    }
+}
+
+h2,
+.subtitle {
+    font-size: 56px;
+    line-height: 68px;
+    @include font-extra-bold();
+    color: $c-white;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+p {
+    font-size: $font-size-base;
+    @include font-regular();
+    margin: 0;
+    color: $c-white;
+}
+
+a {
+    display: block;
+}
+
+.text-big {
+    font-size: $font-size-big;
+    line-height: 36px;
+}
+
+.text-smaller {
+    font-size: $font-size-smaller;
+    line-height: 22px;
+}
+
+.text-medium {
+    font-size: $font-size-medium;
+    line-height: 24px;
+}
