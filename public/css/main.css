@@ -7152,7 +7152,7 @@ h1 {
   line-height: 96px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 900;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 24px; }
   @media (max-width: 767.98px) {
     h1 {
@@ -7165,22 +7165,43 @@ h2,
   line-height: 68px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 900;
-  color: #FFFFFF; }
+  color: #ffffff; }
   @media (max-width: 767.98px) {
     h2,
     .subtitle {
       font-size: 40px;
       line-height: 40px; } }
 
+h3,
+.sub-subtitle {
+  font-size: 30px;
+  line-height: 37px;
+  color: #080c2f; }
+
+h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400; }
+
+.sub-subtitle {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 900; }
+
 p {
   font-size: 16px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 400;
   margin: 0;
-  color: #FFFFFF; }
+  color: #ffffff; }
 
 a {
   display: block; }
+
+small {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+  color: #080c2f; }
 
 .text-big {
   font-size: 24px;
@@ -7193,6 +7214,42 @@ a {
 .text-medium {
   font-size: 18px;
   line-height: 24px; }
+
+::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+  color: #7c7f91;
+  top: -2px;
+  position: relative; }
+
+:-moz-placeholder {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+  color: #7c7f91;
+  top: -2px;
+  position: relative; }
+
+::-moz-placeholder {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+  color: #7c7f91;
+  top: -2px;
+  position: relative; }
+
+:-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+  color: #7c7f91;
+  top: -2px;
+  position: relative; }
 
 *,
 *::before,
@@ -7226,6 +7283,65 @@ ul {
   .image-wrapper img {
     width: 100%; }
 
+label {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: #080c2f; }
+
+label.form-check-label {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: #080c2f;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300; }
+
+input,
+input.form-control {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+  border: none;
+  background-color: #f2f4f4;
+  padding: 10px 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  color: #080c2f; }
+  input:focus,
+  input.form-control:focus {
+    background-color: #f2f4f4;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+select,
+select.form-control {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+  border: none;
+  background-color: #f2f4f4;
+  padding: 10px 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  color: #080c2f;
+  text-indent: 8px; }
+  select:focus,
+  select.form-control:focus {
+    background-color: #f2f4f4;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
 header {
   position: relative;
   padding-top: 40px;
@@ -7256,7 +7372,7 @@ header {
         text-transform: uppercase;
         border: none;
         background-color: none;
-        color: #FFFFFF; }
+        color: #ffffff; }
         header nav ul li a:hover {
           color: #4053d8;
           text-decoration: none; }
@@ -7273,13 +7389,13 @@ header {
           text-align: center;
           text-decoration: none;
           text-transform: uppercase;
-          border: 2px solid #FFFFFF;
+          border: 2px solid #ffffff;
           background-color: none;
           padding: 13px 32px;
           border-radius: 24px;
           -webkit-border-radius: 24px;
           -moz-border-radius: 24px;
-          color: #FFFFFF; }
+          color: #ffffff; }
           header nav ul li a.secondary-button-outline-white:hover {
             border: 2px solid #4053d8;
             color: #4053d8; }
@@ -7299,8 +7415,8 @@ header {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid #FFFFFF;
-    background-color: #FFFFFF;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
     padding: 13px 32px;
     border-radius: 24px;
     -webkit-border-radius: 24px;
@@ -7321,7 +7437,7 @@ header {
 
 .family-container {
   padding: 92px 0 119px 0;
-  background-color: #FFFFFF; }
+  background-color: #ffffff; }
   @media (max-width: 767.98px) {
     .family-container {
       padding: 30px 0 40px 0; } }
@@ -7379,7 +7495,7 @@ header {
       .how-container .how-top-container {
         padding: 60px 0; } }
   .how-container .how-bottom-container {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     position: relative;
     z-index: 2; }
     .how-container .how-bottom-container svg {
@@ -7433,7 +7549,7 @@ header {
 
 .counters-container {
   padding: 50px 0;
-  background-color: #FFFFFF; }
+  background-color: #ffffff; }
   .counters-container h2 {
     text-align: left;
     color: #080c2f; }
@@ -7456,44 +7572,10 @@ header {
     .counters-container .logo img {
       width: 100%; }
 
-.login-container {
-  padding: 92px 0 119px 0;
-  background-color: #FFFFFF; }
-  @media (max-width: 767.98px) {
-    .login-container {
-      padding: 30px 0 40px 0; } }
-  .login-container h1,
-  .login-container p {
-    color: #080c2f; }
-  .login-container input[type="submit"] {
-    margin-top: 24px;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 2px solid #080c2f;
-    background-color: none;
-    padding: 13px 32px;
-    border-radius: 24px;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    color: #080c2f; }
-    .login-container input[type="submit"]:hover {
-      border: 2px solid #4053d8;
-      color: #4053d8; }
-    .login-container input[type="submit"]:active {
-      border: 2px solid #4053d8;
-      color: #4053d8; }
-
 footer {
   bottom: 0;
   position: relative;
-  background: #FFFFFF; }
+  background: #ffffff; }
   footer:before {
     content: '';
     display: block;
@@ -7535,3 +7617,46 @@ footer {
         @media (max-width: 767.98px) {
           footer ul li span {
             display: none; } }
+
+.login-page {
+  background: #ffffff; }
+  .login-page h1 {
+    color: #080c2f;
+    text-align: center; }
+  .login-page p {
+    color: #080c2f; }
+  .login-page .login-student-container h3 {
+    text-align: center; }
+  .login-page .login-student-container a {
+    color: #080c2f;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .login-page .login-student-container button {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #080c2f;
+    background-color: #080c2f;
+    padding: 13px 32px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    color: #ffffff;
+    margin: 50px 0; }
+    .login-page .login-student-container button:hover {
+      background-color: #4053d8;
+      color: #ffffff; }
+    .login-page .login-student-container button:active {
+      background-color: #4053d8;
+      color: #ffffff; }
+  @media (max-width: 767.98px) {
+    .login-page .login-student-container .text-right {
+      text-align: left !important; } }

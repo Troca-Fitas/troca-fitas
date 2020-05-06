@@ -19,88 +19,97 @@
     <link rel="stylesheet" href="./public/css/main.css" />
   </head>
 
-  <body>
-    <section class="login-container">
+  <body class="login-page">
+    <header>
       <div class="container">
         <div class="row">
           <div
             class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
           >
             <div class="text-center">
-              <h1>Login</h1>
-              <p class="text-small">
-                Se já tens registo no Troca Fitas faz login aqui:
-              </p>
+              <h1 class="sub-subtitle">Olá!</h1>
+              <p>Se já tens registo no Troca Fitas faz login aqui:</p>
             </div>
           </div>
         </div>
+      </div>
+    </header>
 
+    <section class="login-student-container">
+      <div class="container">
         <div class="row">
-          <form
-            class="new_user"
-            id="new_user"
-            action="/users/sign_in"
-            accept-charset="UTF-8"
-            method="post"
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
           >
-            <input
-              type="hidden"
-              name="authenticity_token"
-              value="6suWWnDlDSnTqnX2RuqXQ9T2xW8TNhKbeeYynIHD/BVgsWtNqlpcipdy53X3eouZAxOw0P13EKMRz+I4YZ1irg=="
-            />
-            <div class="form-group">
-              <label for="user_email">Email</label><br />
-              <input
-                autofocus="autofocus"
-                autocomplete="email"
-                type="email"
-                value=""
-                name="user[email]"
-                id="user_email"
-              />
-            </div>
+            <div class="mt-5">
+              <form>
+                <div class="form-group">
+                  <label for="user_email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="user_email"
+                    placeholder="email@omeuemail.com"
+                    name="user[email]"
+                  />
+                </div>
 
-            <div class="form-group">
-              <label for="user_password">Password</label><br />
-              <input
-                autocomplete="current-password"
-                type="password"
-                name="user[password]"
-                id="user_password"
-              />
+                <div class="form-group">
+                  <label for="user_password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="user_password"
+                    placeholder="Password"
+                    name="user[password]"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="form-group form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="user_remember_me"
+                      />
+                      <label class="form-check-label" for="user_remember_me"
+                        >Lembrar-me</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="text-right">
+                      <a href="/users/password/new" target="_self"
+                        >Não te lembras da tua password?</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Entrar
+                  </button>
+                </div>
+                <div class="row"></div>
+              </form>
             </div>
-
-            <div class="form-check">
-              <input name="user[remember_me]" type="hidden" value="0" />
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="1"
-                name="user[remember_me]"
-                id="user_remember_me"
-              />
-              <label class="form-check-label" for="user_remember_me"
-                >Remember me</label
-              >
-            </div>
-
-            <div class="actions">
-              <input
-                type="submit"
-                name="commit"
-                value="Entrar"
-                data-disable-with="Entrar"
-              />
-            </div>
-          </form>
+          </div>
         </div>
+      </div>
+    </section>
+    <section class="login-student-container">
+      <div class="container">
         <div class="row">
-          <div class="text-center">
-            <p>
-              Se és finalista e gostavas de trocar fitas com os teus amigos e
-              familiares
-            </p>
-            <a href="#">Faz o teu registo aqui</a>
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+          >
+            <div class="text-center">
+              <p>
+                Se és finalista e gostavas de trocar fitas com os teus amigos e
+                familiares
+              </p>
+              <a href="/users/sign_up" target="_self">Faz o teu registo aqui</a>
+            </div>
           </div>
         </div>
       </div>
