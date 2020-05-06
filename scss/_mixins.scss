@@ -3,3 +3,19 @@
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 }
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}  
+  }
+  
+  @include placeholder {
+	  font-size: 12px;
+	  line-height: 12px;
+	  @include font-light();
+	  color: $c-grey;
+	  top: -2px;
+	  position: relative;
+  }

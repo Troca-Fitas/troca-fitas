@@ -1,0 +1,71 @@
+.register-page {
+    background: $c-white;
+
+    h1 {
+        color: $c-primary;
+        text-align: center;
+    }
+
+    .register-student-container {
+        h3 {
+            text-align: center;
+        }
+
+        button {
+            @include secondary-button();
+            margin: 50px 0;
+        }
+
+        small {
+            margin-bottom: 8px;
+        }
+        
+    }
+
+    .register-steps {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin: 24px 0 40px 0;
+        li {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+            .step-ball {
+                width: 36px;
+                height: 36px;
+                display: block;
+                background-color: $c-light-grey;
+                @include border-radius(50%);
+                @include font-bold;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                margin-bottom: 8px;
+                padding: 9px;
+            }
+            &.active {
+                @include font-bold;
+                .step-ball {
+                    background-color: $c-blue;
+                    color: $c-white;
+                }
+            }
+            
+        }
+        &::before {
+            content: '';
+            width: 82%;
+            height: 2px;
+            position: absolute;
+            background-color: $c-light-grey;
+            top: 18px;
+            left: 11%;
+        }
+    }
+}

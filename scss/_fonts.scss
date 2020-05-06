@@ -2,6 +2,16 @@ $font-primary: 'Montserrat',
 Arial,
 sans-serif;
 
+@mixin font-extra-light {
+    font-family: $font-primary;
+    font-weight: 100;
+}
+
+@mixin font-light {
+    font-family: $font-primary;
+    font-weight: 300;
+}
+
 @mixin font-regular {
     font-family: $font-primary;
     font-weight: 400;
@@ -74,6 +84,19 @@ h2,
     }
 }
 
+h3,
+.sub-subtitle {
+    font-size: 30px;
+    line-height: 37px;
+    color: $c-primary;
+}
+h3 {
+    @include font-regular();
+}
+.sub-subtitle {
+    @include font-extra-bold();
+}
+
 p {
     font-size: $font-size-base;
     @include font-regular();
@@ -83,6 +106,13 @@ p {
 
 a {
     display: block;
+}
+
+small {
+    font-size: $font-size-smaller;
+    line-height: 15px;
+    @include font-light;
+    color: $c-primary;
 }
 
 .text-big {
@@ -99,3 +129,4 @@ a {
     font-size: $font-size-medium;
     line-height: 24px;
 }
+
