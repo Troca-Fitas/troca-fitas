@@ -1,0 +1,36 @@
+.login-page {
+  background: $c-white;
+
+  h1 {
+    color: $c-primary;
+    text-align: center;
+  }
+  p {
+    color: $c-primary;
+  }
+
+  .login-student-container {
+    h3 {
+      text-align: center;
+    }
+
+    a {
+      color: $c-primary;
+      font-size: $font-size-smaller;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    button {
+      @include secondary-button();
+      margin: 50px 0;
+    }
+
+    .text-right {
+      @include media-breakpoint-down(sm) {
+        text-align: left !important;
+      }
+    }
+  }
+}

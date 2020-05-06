@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Troca Fitas</title>
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- css own -->
+    <link rel="stylesheet" href="./public/css/main.css" />
+  </head>
+
+  <body class="login-page">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+          >
+            <div class="text-center">
+              <h1 class="sub-subtitle">Olá!</h1>
+              <p>Se já tens registo no Troca Fitas faz login aqui:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="login-student-container">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+          >
+            <div class="mt-5">
+              <form>
+                <div class="form-group">
+                  <label for="user_email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="user_email"
+                    placeholder="email@omeuemail.com"
+                    name="user[email]"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="user_password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="user_password"
+                    placeholder="Password"
+                    name="user[password]"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="form-group form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="user_remember_me"
+                      />
+                      <label class="form-check-label" for="user_remember_me"
+                        >Lembrar-me</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="text-right">
+                      <a href="/users/password/new" target="_self"
+                        >Não te lembras da tua password?</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Entrar
+                  </button>
+                </div>
+                <div class="row"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="login-student-container">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+          >
+            <div class="text-center">
+              <p>
+                Se és finalista e gostavas de trocar fitas com os teus amigos e
+                familiares
+              </p>
+              <a href="/users/sign_up" target="_self">Faz o teu registo aqui</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top"></div>
+      <div class="footer-bottom">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon fill="#080c2f" points="0,100 100,0 100,100" />
+        </svg>
+        <ul>
+          <li><a href="#"> Termos e Condições </a><span>-</span></li>
+          <li><a href="#"> Política de Privacidade </a><span>-</span></li>
+          <li>
+            <a href="#">
+              info@trocafitas.pt
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- project script -->
+    <script type="text/javascript" src="./scripts.js"></script>
+  </body>
+</html>

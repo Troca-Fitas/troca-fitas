@@ -1,6 +1,14 @@
-$font-primary: 'Montserrat',
-Arial,
-sans-serif;
+$font-primary: "Montserrat", Arial, sans-serif;
+
+@mixin font-extra-light {
+  font-family: $font-primary;
+  font-weight: 100;
+}
+
+@mixin font-light {
+  font-family: $font-primary;
+  font-weight: 300;
+}
 
 @mixin font-extra-light {
     font-family: $font-primary;
@@ -13,23 +21,23 @@ sans-serif;
 }
 
 @mixin font-regular {
-    font-family: $font-primary;
-    font-weight: 400;
+  font-family: $font-primary;
+  font-weight: 400;
 }
 
 @mixin font-semi-bold {
-    font-family: $font-primary;
-    font-weight: 500;
+  font-family: $font-primary;
+  font-weight: 500;
 }
 
 @mixin font-bold {
-    font-family: $font-primary;
-    font-weight: 700;
+  font-family: $font-primary;
+  font-weight: 700;
 }
 
 @mixin font-extra-bold {
-    font-family: $font-primary;
-    font-weight: 900;
+  font-family: $font-primary;
+  font-weight: 900;
 }
 
 // - Font sizes
@@ -54,34 +62,47 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-size: 96px;
-    line-height: 96px;
-    @include font-extra-bold();
-    color: $c-white;
-    margin-bottom: 24px;
+  font-size: 96px;
+  line-height: 96px;
+  @include font-extra-bold();
+  color: $c-white;
+  margin-bottom: 24px;
 
-    @include media-breakpoint-down(sm) {
-        font-size: 66px;
-        line-height: 66px;
-    }
+  @include media-breakpoint-down(sm) {
+    font-size: 66px;
+    line-height: 66px;
+  }
 }
 
 h2,
 .subtitle {
-    font-size: 56px;
-    line-height: 68px;
-    @include font-extra-bold();
-    color: $c-white;
+  font-size: 56px;
+  line-height: 68px;
+  @include font-extra-bold();
+  color: $c-white;
 
-    @include media-breakpoint-down(sm) {
-        font-size: 40px;
-        line-height: 40px;
-    }
+  @include media-breakpoint-down(sm) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+h3,
+.sub-subtitle {
+  font-size: 30px;
+  line-height: 37px;
+  color: $c-primary;
+}
+h3 {
+  @include font-regular();
+}
+.sub-subtitle {
+  @include font-extra-bold();
 }
 
 h3,
@@ -98,14 +119,21 @@ h3 {
 }
 
 p {
-    font-size: $font-size-base;
-    @include font-regular();
-    margin: 0;
-    color: $c-white;
+  font-size: $font-size-base;
+  @include font-regular();
+  margin: 0;
+  color: $c-white;
 }
 
 a {
-    display: block;
+  display: block;
+}
+
+small {
+  font-size: $font-size-smaller;
+  line-height: 15px;
+  @include font-light;
+  color: $c-primary;
 }
 
 small {
@@ -116,13 +144,13 @@ small {
 }
 
 .text-big {
-    font-size: $font-size-big;
-    line-height: 36px;
+  font-size: $font-size-big;
+  line-height: 36px;
 }
 
 .text-smaller {
-    font-size: $font-size-smaller;
-    line-height: 22px;
+  font-size: $font-size-smaller;
+  line-height: 22px;
 }
 
 .text-medium {
