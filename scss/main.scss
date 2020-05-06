@@ -1,5 +1,5 @@
 //fonts
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 
 //bootstrap
 @import "../node_modules/bootstrap-scss/bootstrap.scss";
@@ -12,8 +12,11 @@
 @import "./general";
 @import "./components";
 
+
+
 //pages
 @import "./components/header";
 @import "./components/homepage";
 @import "./components/footer";
 @import "./components/login-page";
+@import "./components/register-page";

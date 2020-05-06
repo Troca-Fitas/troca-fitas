@@ -178,48 +178,53 @@ label.form-check-label {
 
 //input
 @mixin form-input {
-  @include font-semi-bold;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: left;
-  border: none;
-  background-color: $c-light-grey;
-  padding: 10px 15px;
-  @include border-radius(8px);
-  color: $c-primary;
-  &:focus {
+    @include font-semi-bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+    border: none;
     background-color: $c-light-grey;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+    padding: 10px 15px;
+    @include border-radius(8px);
+    color: $c-primary;
+    &:focus {
+        background-color: $c-light-grey;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  
+    &:active {
+        border: 2px solid $c-blue;
+        color: $c-blue;
+    }
 }
 
 input,
 input.form-control {
-  @include form-input();
+    @include form-input();
 }
 
 //select
 @mixin form-select {
-  @include font-semi-bold;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: left;
-  border: none;
-  background-color: $c-light-grey;
-  padding: 10px 15px;
-  @include border-radius(8px);
-  color: $c-primary;
-  text-indent: 8px;
-
-  &:focus {
+    @include font-semi-bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+    border: none;
     background-color: $c-light-grey;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+    padding: 10px 15px;
+    @include border-radius(8px);
+    color: $c-primary;
+    text-indent: 8px;
+
+    &:focus {
+        background-color: $c-light-grey;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
 }
 
 select,
 select.form-control {
-  @include form-select();
+    @include form-select();
 }
