@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -7181,25 +7180,15 @@ h3,
 
 h3 {
   font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 400; }
+  font-weight: 300; }
 
 .sub-subtitle {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 900; }
-
-h3,
-.sub-subtitle {
-  font-size: 30px;
-  line-height: 37px;
-  color: #080c2f; }
-
-h3 {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 400; }
-
-.sub-subtitle {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 900; }
+  @media (max-width: 767.98px) {
+    .sub-subtitle {
+      font-size: 24px;
+      line-height: 34px; } }
 
 p {
   font-size: 16px;
@@ -7210,13 +7199,6 @@ p {
 
 a {
   display: block; }
-
-small {
-  font-size: 12px;
-  line-height: 15px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 300;
-  color: #080c2f; }
 
 small {
   font-size: 12px;
@@ -7524,6 +7506,10 @@ header {
     background-color: #FFFFFF;
     position: relative;
     z-index: 2; }
+    @media (max-width: 767.98px) {
+      .homepage .how-container .how-bottom-container {
+        background-color: #080c2f;
+        padding-bottom: 70px; } }
     .homepage .how-container .how-bottom-container svg {
       position: absolute;
       top: -3vw;
@@ -7531,6 +7517,9 @@ header {
       width: 100%;
       height: 3vw;
       z-index: 1; }
+      @media (max-width: 767.98px) {
+        .homepage .how-container .how-bottom-container svg {
+          display: none; } }
     .homepage .how-container .how-bottom-container ul {
       display: flex;
       justify-content: center;
@@ -7538,6 +7527,11 @@ header {
       z-index: 2;
       top: -42px;
       padding: 0 15px; }
+      @media (max-width: 767.98px) {
+        .homepage .how-container .how-bottom-container ul {
+          display: block;
+          top: 0;
+          padding: 0; } }
       .homepage .how-container .how-bottom-container ul li {
         background-repeat: no-repeat;
         background-position: top center;
@@ -7547,31 +7541,52 @@ header {
         @media (max-width: 991.98px) {
           .homepage .how-container .how-bottom-container ul li {
             padding: 20px; } }
+        @media (max-width: 767.98px) {
+          .homepage .how-container .how-bottom-container ul li {
+            background-size: 100% auto;
+            background-position: left;
+            min-height: inherit;
+            padding-top: 50px; } }
         .homepage .how-container .how-bottom-container ul li:first-child {
           width: 332px;
           background-image: url("../../images/Fita_HowTo_01.png");
           top: 28px;
           margin-right: 50px; }
-          @media (max-width: 1199.98px) {
+          @media (max-width: 767.98px) {
             .homepage .how-container .how-bottom-container ul li:first-child {
-              width: 33%;
-              margin-right: 30px; } }
+              background-image: url("../../images/M_Fita_HowTo_01.png");
+              max-width: 359px;
+              min-height: 230px;
+              margin-right: 0px;
+              width: 100%;
+              top: inherit; } }
         .homepage .how-container .how-bottom-container ul li:nth-child(2n) {
           width: 350px;
           background-image: url("../../images/Fita_HowTo_02.png");
+          height: 207px;
           top: 15px;
+          padding-left: 60px;
+          padding-right: 40px;
           margin-right: 90px; }
-          @media (max-width: 1199.98px) {
+          @media (max-width: 767.98px) {
             .homepage .how-container .how-bottom-container ul li:nth-child(2n) {
-              width: 33%;
-              margin-right: 30px; } }
+              background-image: url("../../images/M_Fita_HowTo_02.png");
+              max-width: 385px;
+              min-height: 207px;
+              margin-right: 0px;
+              width: 100%;
+              top: 0; } }
         .homepage .how-container .how-bottom-container ul li:nth-child(3n) {
           width: 373px;
           background-image: url("../../images/Fita_HowTo_03.png");
           top: 1px; }
-          @media (max-width: 1199.98px) {
+          @media (max-width: 767.98px) {
             .homepage .how-container .how-bottom-container ul li:nth-child(3n) {
-              width: 33%; } }
+              background-image: url("../../images/M_Fita_HowTo_03.png");
+              max-width: 336px;
+              min-height: 201px;
+              width: 100%;
+              top: inherit; } }
 
 .homepage .counters-container {
   padding: 50px 0;
@@ -7663,7 +7678,7 @@ footer {
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 700;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 11px;
     letter-spacing: 1px;
     cursor: pointer;
     text-align: center;
@@ -7678,9 +7693,11 @@ footer {
     color: #FFFFFF;
     margin: 50px 0; }
     .login-page .login-student-container button:hover {
+      border: 2px solid #4053d8;
       background-color: #4053d8;
       color: #FFFFFF; }
     .login-page .login-student-container button:active {
+      border: 2px solid #4053d8;
       background-color: #4053d8;
       color: #FFFFFF; }
   @media (max-width: 767.98px) {
@@ -7688,17 +7705,146 @@ footer {
       text-align: left !important; } }
 
 .register-page {
-  background: #FFFFFF; }
-  .register-page h1 {
+  background: #FFFFFF;
+  position: relative;
+  z-index: 1; }
+  .register-page .ribbons-background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: red;
+    /* &:before {
+            content: '';
+            width: 100%;
+            height: 807px;
+            display: block;
+            background-image: url("/images/register-background-ribbons.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin: 0 auto;
+            object-fit: cover;
+            position: absolute;
+            top: 0px;
+            z-index: 0;
+        } */ }
+    .register-page .ribbons-background .ribbons-background-1 {
+      width: 35px;
+      height: 71px;
+      background-image: url("/images/register-background-ribbons_top-left.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      left: 40px;
+      z-index: 0; }
+    .register-page .ribbons-background .ribbons-background-2 {
+      width: 26px;
+      height: 34px;
+      background-image: url("/images/register-background-ribbons_right.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 10%;
+      top: 425px;
+      z-index: 0; }
+    .register-page .ribbons-background .ribbons-background-3 {
+      width: 297px;
+      height: 250px;
+      background-image: url("/images/register-background-ribbons_bottom-left.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 500px;
+      left: -10px;
+      z-index: 0; }
+  .register-page header.register-header {
+    padding: 0; }
+    .register-page header.register-header .header-top {
+      width: 100%;
+      height: 82px;
+      background-image: url("/images/header-top-fitas.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 0 auto;
+      object-fit: cover; }
+    .register-page header.register-header .close-page {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      background-color: transparent;
+      color: #080c2f;
+      position: relative;
+      padding-right: 31px;
+      transition: color 0.3s ease-in-out;
+      -webkit-transition: color 0.3s ease-in-out;
+      -moz-transition: color 0.3s ease-in-out;
+      position: relative;
+      top: 35px; }
+      @media (max-width: 991.98px) {
+        .register-page header.register-header .close-page {
+          font-size: 0;
+          padding-right: 17px; } }
+      .register-page header.register-header .close-page:before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-image: url("/images/ic_close.svg");
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        background-position: right;
+        position: absolute;
+        right: 0; }
+      .register-page header.register-header .close-page:hover {
+        color: #4053d8;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        -webkit-transition: color 0.3s ease-in-out;
+        -moz-transition: color 0.3s ease-in-out; }
+        .register-page header.register-header .close-page:hover:before {
+          content: '';
+          background-image: url("/images/ic_close-hover.svg"); }
+      .register-page header.register-header .close-page:active {
+        color: #4053d8;
+        text-decoration: none; }
+      @media (max-width: 991.98px) {
+        .register-page header.register-header .close-page {
+          top: 0;
+          margin-bottom: 16px; } }
+    .register-page header.register-header h1 {
+      color: #080c2f;
+      text-align: center; }
+  .register-page .logo {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
     color: #080c2f;
-    text-align: center; }
+    margin-top: 40px;
+    padding-bottom: 46px;
+    position: relative; }
+    .register-page .logo:after {
+      content: '';
+      width: 50px;
+      height: 46px;
+      display: block;
+      background-image: url("/images/register-ribbon-footer.png");
+      background-repeat: no-repeat;
+      background-size: 50px 46px;
+      position: absolute;
+      right: 36%; }
   .register-page .register-student-container h3 {
     text-align: center; }
   .register-page .register-student-container button {
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 700;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 11px;
     letter-spacing: 1px;
     cursor: pointer;
     text-align: center;
@@ -7713,19 +7859,27 @@ footer {
     color: #FFFFFF;
     margin: 50px 0; }
     .register-page .register-student-container button:hover {
+      border: 2px solid #4053d8;
       background-color: #4053d8;
       color: #FFFFFF; }
     .register-page .register-student-container button:active {
+      border: 2px solid #4053d8;
       background-color: #4053d8;
       color: #FFFFFF; }
   .register-page .register-student-container small {
     margin-bottom: 8px; }
+  .register-page .register-student-container form {
+    padding-top: 40px; }
   .register-page .register-steps {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    margin: 24px 0 40px 0; }
+    margin: 24px auto 40px auto;
+    width: 90%; }
+    @media (max-width: 767.98px) {
+      .register-page .register-steps {
+        width: 100%; } }
     .register-page .register-steps li {
       font-size: 12px;
       line-height: 15px;
@@ -7757,12 +7911,16 @@ footer {
           color: #FFFFFF; }
     .register-page .register-steps::before {
       content: '';
-      width: 82%;
+      width: 91%;
       height: 2px;
       position: absolute;
       background-color: #F2F4F4;
       top: 18px;
-      left: 11%; }
+      left: 6%; }
+      @media (max-width: 767.98px) {
+        .register-page .register-steps::before {
+          width: 84%;
+          left: 35px; } }
 
 .recoverpass-page {
   background: #FFFFFF; }
@@ -7783,7 +7941,7 @@ footer {
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 700;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 11px;
     letter-spacing: 1px;
     cursor: pointer;
     text-align: center;
@@ -7798,12 +7956,13 @@ footer {
     color: #FFFFFF;
     margin: 50px 0; }
     .recoverpass-page .recoverpass-student-container button:hover {
+      border: 2px solid #4053d8;
       background-color: #4053d8;
       color: #FFFFFF; }
     .recoverpass-page .recoverpass-student-container button:active {
+      border: 2px solid #4053d8;
       background-color: #4053d8;
       color: #FFFFFF; }
   @media (max-width: 767.98px) {
     .recoverpass-page .recoverpass-student-container .text-right {
       text-align: left !important; } }
-

@@ -1,9 +1,114 @@
 .register-page {
     background: $c-white;
+    position: relative;
+    z-index: 1;
+    
+    
+    .ribbons-background {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: red;
 
-    h1 {
-        color: $c-primary;
+        .ribbons-background-1 {
+            width: 35px;
+            height: 71px;
+            background-image: url("/images/register-background-ribbons_top-left.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0px;
+            left: 40px;
+            z-index: 0;
+        }
+        .ribbons-background-2 {
+            width: 26px;
+            height: 34px;
+            background-image: url("/images/register-background-ribbons_right.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 10%;
+            top: 425px;
+            z-index: 0;
+        }
+        .ribbons-background-3 {
+            width: 297px;
+            height: 250px;
+            background-image: url("/images/register-background-ribbons_bottom-left.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 500px;
+            left: -10px;
+            z-index: 0;
+        }
+
+        /* &:before {
+            content: '';
+            width: 100%;
+            height: 807px;
+            display: block;
+            background-image: url("/images/register-background-ribbons.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin: 0 auto;
+            object-fit: cover;
+            position: absolute;
+            top: 0px;
+            z-index: 0;
+        } */
+    }
+    header.register-header {
+        padding: 0;
+
+        .header-top {
+            width: 100%;
+            height: 82px;
+            background-image: url("/images/header-top-fitas.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+
+        .close-page {
+            @include text-button-icon;
+            position: relative;
+            top: 35px;
+
+            @include media-breakpoint-down(md) {
+                top: 0;
+                margin-bottom: 16px;
+            }
+        }
+
+        h1 {
+            color: $c-primary;
+            text-align: center;
+        }
+    }
+
+    .logo {
+        @include font-extra-bold;
+        font-size: 48px;
+        line-height: 48px;
         text-align: center;
+        color: $c-primary;
+        margin-top: 40px;
+        padding-bottom: 46px;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 50px;
+            height: 46px;
+            display: block;
+            background-image: url("/images/register-ribbon-footer.png");
+            background-repeat: no-repeat;
+            background-size: 50px 46px;
+            position: absolute;
+            right: 36%;
+        }
     }
 
     .register-student-container {
@@ -19,7 +124,11 @@
         small {
             margin-bottom: 8px;
         }
-        
+
+        form {
+            padding-top: 40px;
+        }
+
     }
 
     .register-steps {
@@ -27,7 +136,13 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
-        margin: 24px 0 40px 0;
+        margin: 24px auto 40px auto;
+        width: 90%;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+
         li {
             font-size: 12px;
             line-height: 15px;
@@ -36,6 +151,7 @@
             flex-direction: column;
             align-items: center;
             z-index: 1;
+
             .step-ball {
                 width: 36px;
                 height: 36px;
@@ -49,23 +165,30 @@
                 margin-bottom: 8px;
                 padding: 9px;
             }
+
             &.active {
                 @include font-bold;
+
                 .step-ball {
                     background-color: $c-blue;
                     color: $c-white;
                 }
             }
-            
         }
+
         &::before {
             content: '';
-            width: 82%;
+            width: 91%;
             height: 2px;
             position: absolute;
             background-color: $c-light-grey;
             top: 18px;
-            left: 11%;
+            left: 6%;
+
+            @include media-breakpoint-down(sm) {
+                width: 84%;
+                left: 35px;
+            }
         }
     }
 }

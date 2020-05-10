@@ -25,7 +25,7 @@
   }
 }
 
-@mixin text-button-icon {
+@mixin text-button-icon($icon: "/images/ic_close.svg", $icon-hover: "/images/ic_close-hover.svg") {
   font-family: $font-primary;
   font-size: 14px;
   line-height: 24px;
@@ -34,16 +34,41 @@
   text-align: center;
   text-decoration: none;
   border: none;
-  background-color: none;
+  background-color: transparent;
   color: $c-primary;
+  position: relative;
+  padding-right: 31px;
+  @include transition(color, 0.3s, ease-in-out);
+  @include media-breakpoint-down(md) {
+    font-size: 0;
+    padding-right: 17px;
+  }
+
+  &:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-image: url($icon);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right;
+    position: absolute;
+    right: 0;
+  }
 
   &:hover {
-    color: $c-white;
+    color: $c-blue;
     text-decoration: none;
+    @include transition(color, 0.3s, ease-in-out);
+    &:before {
+      content: '';
+      background-image: url($icon-hover);
+    }
   }
 
   &:active {
-    color: $c-white;
+    color: $c-blue;
     text-decoration: none;
   }
 }
@@ -81,7 +106,7 @@
   font-family: $font-primary;
   font-weight: 700;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 11px;
   letter-spacing: 1px;
   cursor: pointer;
   text-align: center;
@@ -94,11 +119,13 @@
   color: $c-white;
 
   &:hover {
+    border: 2px solid $c-blue;
     background-color: $c-blue;
     color: $c-white;
   }
 
   &:active {
+    border: 2px solid $c-blue;
     background-color: $c-blue;
     color: $c-white;
   }
