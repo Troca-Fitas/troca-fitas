@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Troca Fitas - Registo</title>
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- css own -->
+    <link rel="stylesheet" href="./public/css/main.css" />
+  </head>
+
+  <body class="invitation-page">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+          >
+            <div class="text-center">
+              <img
+                class="img-hello"
+                src="images/IMG_welcome_invitation.png"
+                alt="Olá"
+                width="162"
+              />
+              <div class="mt-4">
+                <p>
+                  <strong
+                    >Recebeu um convite para escrever na fita de finalista de:
+                    %%FIRST_NAME%% %%LAST_NAME%%</strong
+                  >
+                </p>
+              </div>
+              <div class="mt-3">
+                <p>
+                  Numa altura que nos é pedido distanciamento social a vontade
+                  de estarmos mais próximos aumenta. Através do Troca Fitas
+                  poderá deixar uma memória escrita na fita de finalista.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="invitation-container">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+          >
+            <div class="mt-4">
+              <h3>Faça o seu registo</h3>
+              <form>
+                <div class="form-group mt-4">
+                  <label for="firstAndLastNameInput">Nome e Apelido</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstAndLastNameInput"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="emailInput">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailInput"
+                    placeholder="email@omeuemail.com"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="form-group">
+                      <label for="passwordInput">Definir Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="passwordInput"
+                        placeholder="Password"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="form-group">
+                      <label for="repeatPasswordInput">Repetir Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="repeatPasswordInput"
+                        placeholder="Password"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <small class="form-text"
+                  >*Todos os campos são obrigatórios</small
+                >
+                <div class="form-group form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="termsAndConditionsCheck"
+                  />
+                  <label class="form-check-label" for="termsAndConditionsCheck"
+                    >Aceito os termos e condições do registo</label
+                  >
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Escrever fita
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="invitation-container">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"
+          >
+            <div class="text-center">
+              <p>Se já tens registo no Troca Fitas</p>
+              <a href="/users/sign_in">Faz o login aqui</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- project script -->
+    <script type="text/javascript" src="./scripts.js"></script>
+  </body>
+</html>
