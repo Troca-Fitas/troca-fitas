@@ -72,6 +72,11 @@
       position: relative;
       z-index: 2;
 
+      @include media-breakpoint-down(sm) {
+        background-color: $c-primary;
+        padding-bottom: 70px;
+      }
+
       svg {
         position: absolute;
         top: -3vw;
@@ -79,6 +84,10 @@
         width: 100%;
         height: 3vw;
         z-index: 1;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
       }
 
       ul {
@@ -88,6 +97,11 @@
         z-index: 2;
         top: -42px;
         padding: 0 15px;
+        @include media-breakpoint-down(sm) {
+          display: block;
+          top: 0;
+          padding: 0;
+        }
 
         li {
           background-repeat: no-repeat;
@@ -100,27 +114,45 @@
             padding: 20px;
           }
 
+          @include media-breakpoint-down(sm) {
+            background-size: 100% auto;
+            background-position: left;
+            min-height: inherit;
+            padding-top: 50px;
+          }
+
           &:first-child {
             width: 332px;
             background-image: url("../../images/Fita_HowTo_01.png");
             top: 28px;
             margin-right: 50px;
 
-            @include media-breakpoint-down(lg) {
-              width: 33%;
-              margin-right: 30px;
+            @include media-breakpoint-down(sm) {
+              background-image: url("../../images/M_Fita_HowTo_01.png");
+              max-width: 359px;
+              min-height: 230px;
+              margin-right: 0px;
+              width: 100%;
+              top: inherit;
             }
           }
 
           &:nth-child(2n) {
             width: 350px;
             background-image: url("../../images/Fita_HowTo_02.png");
+            height: 207px;
             top: 15px;
+            padding-left: 60px;
+            padding-right: 40px;
             margin-right: 90px;
 
-            @include media-breakpoint-down(lg) {
-              width: 33%;
-              margin-right: 30px;
+            @include media-breakpoint-down(sm) {
+              background-image: url("../../images/M_Fita_HowTo_02.png");
+              max-width: 385px;
+              min-height: 207px;
+              margin-right: 0px;
+              width: 100%;
+              top: 0;
             }
           }
 
@@ -129,8 +161,12 @@
             background-image: url("../../images/Fita_HowTo_03.png");
             top: 1px;
 
-            @include media-breakpoint-down(lg) {
-              width: 33%;
+            @include media-breakpoint-down(sm) {
+              background-image: url("../../images/M_Fita_HowTo_03.png");
+              max-width: 336px;
+              min-height: 201px;
+              width: 100%;
+              top: inherit;
             }
           }
         }
