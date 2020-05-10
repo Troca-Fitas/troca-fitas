@@ -142,7 +142,7 @@
   text-decoration: none;
   text-transform: uppercase;
   border: 2px solid $c-white;
-  background-color: none;
+  background-color: transparent;
   padding: 13px 32px;
   @include border-radius(24px);
   color: $c-white;
@@ -169,7 +169,7 @@
   text-decoration: none;
   text-transform: uppercase;
   border: 2px solid $c-primary;
-  background-color: none;
+  background-color: transparent;
   padding: 13px 32px;
   @include border-radius(24px);
   color: $c-primary;

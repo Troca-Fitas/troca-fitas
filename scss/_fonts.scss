@@ -93,12 +93,14 @@ h2,
 }
 
 h3,
-.sub-subtitle {
+.sub-subtitle,
+legend {
   font-size: 30px;
   line-height: 37px;
   color: $c-primary;
 }
-h3 {
+h3,
+legend {
   @include font-light();
 }
 .sub-subtitle {
