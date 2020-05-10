@@ -7762,3 +7762,46 @@ footer {
       background-color: #F2F4F4;
       top: 18px;
       left: 11%; }
+
+.recoverpass-page {
+  background: #FFFFFF; }
+  .recoverpass-page h1 {
+    color: #080c2f;
+    text-align: center; }
+  .recoverpass-page p {
+    color: #080c2f; }
+  .recoverpass-page .recoverpass-student-container h3 {
+    text-align: center; }
+  .recoverpass-page .recoverpass-student-container a {
+    color: #080c2f;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .recoverpass-page .recoverpass-student-container button {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #080c2f;
+    background-color: #080c2f;
+    padding: 13px 32px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    color: #FFFFFF;
+    margin: 50px 0; }
+    .recoverpass-page .recoverpass-student-container button:hover {
+      background-color: #4053d8;
+      color: #FFFFFF; }
+    .recoverpass-page .recoverpass-student-container button:active {
+      background-color: #4053d8;
+      color: #FFFFFF; }
+  @media (max-width: 767.98px) {
+    .recoverpass-page .recoverpass-student-container .text-right {
+      text-align: left !important; } }
