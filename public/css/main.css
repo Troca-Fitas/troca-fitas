@@ -7762,3 +7762,45 @@ footer {
       background-color: #F2F4F4;
       top: 18px;
       left: 11%; }
+
+.invitation-page {
+  background: #FFFFFF; }
+  .invitation-page p {
+    color: #080c2f; }
+  .invitation-page .img-hello {
+    position: relative;
+    left: 20px; }
+  .invitation-page .invitation-container h3 {
+    text-align: center; }
+  .invitation-page .invitation-container button {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #080c2f;
+    background-color: #080c2f;
+    padding: 13px 32px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    color: #FFFFFF;
+    margin: 50px 0; }
+    .invitation-page .invitation-container button:hover {
+      background-color: #4053d8;
+      color: #FFFFFF; }
+    .invitation-page .invitation-container button:active {
+      background-color: #4053d8;
+      color: #FFFFFF; }
+  .invitation-page .invitation-container a {
+    color: #080c2f;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .invitation-page .invitation-container small {
+    margin-bottom: 8px; }
