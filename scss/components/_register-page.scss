@@ -1,25 +1,199 @@
 .register-page {
     background: $c-white;
+    position: relative;
+    z-index: 1;
 
-    h1 {
+    p {
         color: $c-primary;
-        text-align: center;
+        font-size: 14px;
     }
 
-    .register-student-container {
-        h3 {
+    header.register-header {
+        padding: 0;
+
+        .header-top {
+            width: 100%;
+            height: 82px;
+            background-image: url("/images/header-top-fitas.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+
+        .close-page {
+            @include text-button-icon;
+            position: relative;
+            top: 35px;
+
+            @include media-breakpoint-down(md) {
+                top: 0;
+                margin-bottom: 16px;
+            }
+        }
+
+        h1 {
+            color: $c-primary;
             text-align: center;
+        }
+    }
+
+    .ribbons-background {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: red;
+
+        .ribbons-background-1 {
+            width: 35px;
+            height: 71px;
+            background-image: url("/images/register-background-ribbons_top-left.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0px;
+            left: 40px;
+            z-index: 0;
+        }
+
+        .ribbons-background-2 {
+            width: 26px;
+            height: 34px;
+            background-image: url("/images/register-background-ribbons_right.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 10%;
+            top: 425px;
+            z-index: 0;
+        }
+
+        .ribbons-background-3 {
+            width: 297px;
+            height: 250px;
+            background-image: url("/images/register-background-ribbons_bottom-left.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 500px;
+            left: -10px;
+            z-index: 0;
+        }
+    }
+
+    .logo {
+        @include font-extra-bold;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        color: $c-primary;
+        margin-top: 40px;
+        padding-bottom: 46px;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 50px;
+            height: 46px;
+            display: block;
+            background-image: url("/images/register-ribbon-footer.png");
+            background-repeat: no-repeat;
+            background-size: 50px 46px;
+            position: absolute;
+            right: 36%;
+        }
+    }
+
+    .final-banner {
+        background-color: $c-primary;
+        display: flex;
+        align-items: center;
+        padding: 34px 15px;
+        @include border-radius(4px);
+        margin-top: 56px;
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            padding: 24px 15px;
+          }
+
+        h3 {
+            color: $c-white;
+            text-align: left;
+            padding: 0 15px;
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+                padding: 0 15px 16px 15px;
+              }
         }
 
         button {
-            @include secondary-button();
-            margin: 50px 0;
+            min-width: 164px;
+            @include secondary-button-outline-white();
+            margin: 0 15px;
+        }
+    }
+
+    .register-student-container {
+        legend {
+            text-align: center;
+            padding: 56px 0 40px 0;
+        }
+
+        #eventDateInput {
+            @include media-breakpoint-down(sm) {
+                margin-top: 20px;
+              }
+        }
+
+        button {
+            &.btn-primary {
+                @include secondary-button();
+                margin: 50px 0;
+            }
+
+            &.btn-secondary {
+                @include secondary-button-outline-dark();
+                margin: 50px 24px 50px 0;
+            }
+
+            &.btn-color-picker {
+                width: 100%;
+                background-color: transparent;
+                border: 2px solid $c-grey;
+                text-align: left;
+                text-transform: uppercase;
+                padding: 14px 15px 14px 56px;
+                font-size: 12px;
+                position: relative;
+                @include border-radius(4px);
+
+                &:before {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    display: block;
+                    background-image: url("/images/ic_colorize.svg");
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 16px;
+                    top: 10px;
+                }
+
+                &:hover {
+                    background-color: $c-light-grey;
+                    color: $c-blue;
+                    border: 2px solid $c-light-grey;
+
+                    &:before {
+                        content: '';
+                        background-image: url("/images/ic_colorize-hover.svg");
+                    }
+                }
+            }
         }
 
         small {
             margin-bottom: 8px;
         }
-        
+
     }
 
     .register-steps {
@@ -27,7 +201,13 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
-        margin: 24px 0 40px 0;
+        margin: 24px auto 0 auto;
+        width: 90%;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+
         li {
             font-size: 12px;
             line-height: 15px;
@@ -36,6 +216,7 @@
             flex-direction: column;
             align-items: center;
             z-index: 1;
+
             .step-ball {
                 width: 36px;
                 height: 36px;
@@ -49,23 +230,39 @@
                 margin-bottom: 8px;
                 padding: 9px;
             }
+
+            &.complete {
+                @include font-bold;
+
+                .step-ball {
+                    background-color: $c-green;
+                    color: $c-white;
+                }
+            }
+
             &.active {
                 @include font-bold;
+
                 .step-ball {
                     background-color: $c-blue;
                     color: $c-white;
                 }
             }
-            
         }
+
         &::before {
             content: '';
-            width: 82%;
+            width: 91%;
             height: 2px;
             position: absolute;
             background-color: $c-light-grey;
             top: 18px;
-            left: 11%;
+            left: 6%;
+
+            @include media-breakpoint-down(sm) {
+                width: 84%;
+                left: 35px;
+            }
         }
     }
 }

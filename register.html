@@ -15,7 +15,17 @@
 
 <body class="register-page">
 
-    <header>
+    <header class="register-header">
+        <div class="header-top"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-right">
+                        <button type="button" class="close-page">Sair sem guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -26,10 +36,16 @@
     </header>
 
     <section class="register-student-container">
+        <div class="ribbons-background">
+            <div class="ribbons-background-1"></div>
+            <div class="ribbons-background-2"></div>
+            <div class="ribbons-background-3"></div>
+        </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                    <div class="register-form-1">
+                    <div class="register-form register-form-1">
                         <div class="row">
                             <div class="col-sm-12">
                                 <ul class="register-steps">
@@ -45,59 +61,181 @@
                                 </ul>
                             </div>
                         </div>
-                        <h3>Os teus dados</h3>
                         <form>
-                            <div class="form-group">
-                                <label for="firstAndLastNameInput">Nome e Apelido</label>
-                                <input type="text" class="form-control" id="firstAndLastNameInput" />
-                            </div>
-                            <div class="form-group">
-                                <label for="emailInput">Email</label>
-                                <input type="email" class="form-control" id="emailInput"
-                                    placeholder="email@omeuemail.com" />
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group">
-                                        <label for="passwordInput">Definir Password</label>
-                                        <input type="password" class="form-control" id="passwordInput"
-                                            placeholder="Password" />
+                            <fieldset>
+                                <legend>Os teus dados</legend>
+                                <div class="form-group">
+                                    <label for="firstAndLastNameInput">Nome e Apelido</label>
+                                    <input type="text" class="form-control" id="firstAndLastNameInput" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailInput">Email</label>
+                                    <input type="email" class="form-control" id="emailInput"
+                                        placeholder="email@omeuemail.com" />
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="passwordInput">Definir Password</label>
+                                            <input type="password" class="form-control" id="passwordInput"
+                                                placeholder="Password" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="repeatPasswordInput">Repetir Password</label>
+                                            <input type="password" class="form-control" id="repeatPasswordInput"
+                                                placeholder="Password" />
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group">
-                                        <label for="repeatPasswordInput">Repetir Password</label>
-                                        <input type="password" class="form-control" id="repeatPasswordInput"
-                                            placeholder="Password" />
-                                    </div>
+                                <div class="form-group">
+                                    <label for="universitySelect">Universidade</label>
+                                    <select class="form-control" id="universitySelect">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="universitySelect">Universidade</label>
-                                <select class="form-control" id="universitySelect">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="courseInput">Curso</label>
-                                <input type="text" class="form-control" id="courseInput"
-                                    placeholder="Escreve o nome completo da teu curso" />
-                            </div>
-                            <small class="form-text">*Todos os campos são obrigatórios</small>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="termsAndConditionsCheck" />
-                                <label class="form-check-label" for="termsAndConditionsCheck">Aceito os termos e
-                                    condições do registo</label>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Continuar</button>
-                            </div>
+                                <div class="form-group">
+                                    <label for="courseInput">Curso</label>
+                                    <input type="text" class="form-control" id="courseInput"
+                                        placeholder="Escreve o nome completo da teu curso" />
+                                </div>
+                                <small class="form-text">*Todos os campos são obrigatórios</small>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="termsAndConditionsCheck" />
+                                    <label class="form-check-label" for="termsAndConditionsCheck">Aceito os termos e
+                                        condições do registo</label>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Continuar</button>
+                                </div>
+                            </fieldset>
                         </form>
                     </div>
+
+                    <div class="register-form register-form-2">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="register-steps">
+                                    <li class="complete">
+                                        <div class="step-ball">1</div>Registo finalista
+                                    </li>
+                                    <li class="active">
+                                        <div class="step-ball">2</div>Escolher fitas
+                                    </li>
+                                    <li>
+                                        <div class="step-ball">3</div>Enviar fitas
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form>
+                            <fieldset>
+                                <legend>A tua pasta de finalista</legend>
+                                <label for="eventDateInput">Data benção das pastas</label>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-8">
+                                        <p>Assinala o dia da tua benção das pastas mesmo que tenha sido adiada. O
+                                            que te
+                                            propomos é que celebres este dia com a leitura das tuas fitas de
+                                            finalista.
+                                            Se não definires data de benção das pastas, por defeito, só poderás
+                                            abrir a
+                                            tua pasta daqui a 7 dias.</p>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <input type="date" id="eventDateInput" name="eventDate">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>As tuas fitas</legend>
+                                <label for="eventDateInput">Fita 01</label>
+                                <div>
+                                    <button class="btn btn-color-picker" type="button" data-toggle="collapse"
+                                        data-target="#collapseColorPicker" aria-expanded="false"
+                                        aria-controls="collapseColorPicker">
+                                        Clica para Definir cor
+                                    </button>
+                                </div>
+                                <div class="collapse" id="collapseColorPicker">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-secondary">Voltar</button>
+                                    <button type="submit" class="btn btn-primary">Continuar</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="register-form register-form-3">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="register-steps">
+                                    <li class="complete">
+                                        <div class="step-ball">1</div>Registo finalista
+                                    </li>
+                                    <li class="complete">
+                                        <div class="step-ball">2</div>Escolher fitas
+                                    </li>
+                                    <li class="active">
+                                        <div class="step-ball">3</div>Enviar fitas
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="final-banner">
+                            <h3>A tua pasta de finalista já está criada!</h3>
+                            <button type="button">Ver pasta</button>
+                        </div>
+                        <form>
+                            <fieldset>
+                                <legend>Pede que te escrevam fitas</legend>
+                                <div class="form-group">
+                                    <label>Como funcionam os convites?</label>
+                                    <p>Cada fita tem um link específico. Clica na fita e copia o link da fita que predentes
+                                        partilhar com os teus amigos e familiares para escreverem uma memória para ti.
+                                        Atenção: qualquer pessoa com o link poderá escrever-te uma fita por isso partilha-o
+                                        em chats privados com essa pessoa.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventDateInput">Fita 01</label>
+                                    <p>https://www.google.pt/</p>
+                                    <div>
+                                        <button class="btn btn-color-picker" type="button" data-toggle="collapse"
+                                            data-target="#collapseColorPicker" aria-expanded="false"
+                                            aria-controls="collapseColorPicker">
+                                            Clica para Definir cor
+                                        </button>
+                                    </div>
+                                </div>                               
+                                <div class="collapse" id="collapseColorPicker">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <p class="logo">Troca Fitas</p>
                 </div>
             </div>
         </div>
