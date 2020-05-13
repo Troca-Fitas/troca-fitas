@@ -29,6 +29,7 @@
     }
 
     .text-big,
+    .text-medium,
     .text-smaller {
       text-align: center;
       color: $c-primary;
@@ -173,7 +174,19 @@
       }
     }
   }
-
+  .fap-container {
+    background-color: $c-white;
+    padding: 90px 0;
+    position: relative;
+    z-index: 1;
+    h2,
+    p {
+      color: $c-primary;
+    }
+    p a {
+      display: inline;
+    }
+  }
   .counters-container {
     padding: 50px 0;
     background-color: $c-white;
@@ -205,10 +218,11 @@
 
     .logo {
       max-width: 160px;
-      margin-top: 15px;
+      margin-right: 30px;
 
       img {
         width: 100%;
+        margin-right: 0px;
       }
     }
   }
