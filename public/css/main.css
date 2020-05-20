@@ -7724,6 +7724,34 @@ footer {
   background: #FFFFFF;
   position: relative;
   z-index: 1; }
+  .register-page .picker-wrapper {
+    display: flex; }
+    .register-page .picker-wrapper .color-picker-wrapper {
+      width: calc(100% - 40px); }
+    .register-page .picker-wrapper .delete-wrapper {
+      width: 40px; }
+    .register-page .picker-wrapper ul.color-picker {
+      display: flex;
+      flex-flow: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background-color: #F2F4F4;
+      margin-top: 8px;
+      padding: 4px;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px; }
+      .register-page .picker-wrapper ul.color-picker li {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 4px;
+        opacity: 0.7;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px; }
   .register-page p {
     color: #080c2f;
     font-size: 14px; }
@@ -7966,13 +7994,48 @@ footer {
       position: absolute;
       left: 16px;
       top: 10px; }
-    .register-page .register-student-container button.btn-color-picker:hover {
+    .register-page .register-student-container button.btn-color-picker:hover, .register-page .register-student-container button.btn-color-picker[aria-expanded="true"] {
       background-color: #F2F4F4;
       color: #4053d8;
       border: 2px solid #F2F4F4; }
-      .register-page .register-student-container button.btn-color-picker:hover:before {
+      .register-page .register-student-container button.btn-color-picker:hover:before, .register-page .register-student-container button.btn-color-picker[aria-expanded="true"]:before {
         content: '';
         background-image: url("/images/ic_colorize-hover.svg"); }
+    .register-page .register-student-container button.btn-color-picker.clean-text {
+      color: transparent; }
+      .register-page .register-student-container button.btn-color-picker.clean-text:before {
+        content: '';
+        width: 0;
+        height: 0;
+        display: block;
+        background-image: none;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .register-page .register-student-container button.btn-color-picker.clean-text:hover {
+        color: transparent; }
+  .register-page .register-student-container button.btn-delete {
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    width: 40px;
+    height: 50px; }
+    .register-page .register-student-container button.btn-delete:before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-image: url(/images/ic_delete.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 16px;
+      top: 10px; }
+    .register-page .register-student-container button.btn-delete.show {
+      display: block; }
+    .register-page .register-student-container button.btn-delete.hide {
+      display: none; }
   .register-page .register-student-container small {
     margin-bottom: 8px; }
   .register-page .register-steps {
