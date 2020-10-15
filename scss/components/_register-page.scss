@@ -3,6 +3,40 @@
     position: relative;
     z-index: 1;
 
+    .picker-wrapper {
+        display: flex;
+
+        .color-picker-wrapper {
+            width: calc(100% - 40px);
+        }
+
+        .delete-wrapper {
+            width: 40px;
+        }
+
+        ul.color-picker {
+            display: flex;
+            flex-flow: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background-color: $c-light-grey;
+            margin-top: 8px;
+            padding: 4px;
+            @include border-radius(4px);
+
+            li {
+                width: 50px;
+                height: 50px;
+                display: block;
+                margin: 4px;
+                opacity: 0.7;
+                @include border-radius(4px);
+            }
+        }
+    }
+
     p {
         color: $c-primary;
         font-size: 14px;
@@ -109,19 +143,21 @@
         padding: 34px 15px;
         @include border-radius(4px);
         margin-top: 56px;
+
         @include media-breakpoint-down(sm) {
             flex-direction: column;
             padding: 24px 15px;
-          }
+        }
 
         h3 {
             color: $c-white;
             text-align: left;
             padding: 0 15px;
+
             @include media-breakpoint-down(sm) {
                 text-align: center;
                 padding: 0 15px 16px 15px;
-              }
+            }
         }
 
         button {
@@ -140,7 +176,7 @@
         #eventDateInput {
             @include media-breakpoint-down(sm) {
                 margin-top: 20px;
-              }
+            }
         }
 
         button {
@@ -177,7 +213,8 @@
                     top: 10px;
                 }
 
-                &:hover {
+                &:hover,
+                &[aria-expanded="true"] {
                     background-color: $c-light-grey;
                     color: $c-blue;
                     border: 2px solid $c-light-grey;
@@ -186,6 +223,53 @@
                         content: '';
                         background-image: url("/images/ic_colorize-hover.svg");
                     }
+                }
+
+                &.clean-text {
+                    color: transparent;
+                    &:before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        display: block;
+                        background-image: none;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    &:hover {
+                        color: transparent;
+                    }
+                }
+            }
+
+            &.btn-delete {
+                position: relative;
+                background-color: transparent;
+                border: 0;
+                padding: 0;
+                width: 40px;
+                height: 50px;
+
+                &:before {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    display: block;
+                    background-image: url(/images/ic_delete.svg);
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 16px;
+                    top: 10px;
+                }
+
+                &.show {
+                    display: block;
+                }
+
+                &.hide {
+                    display: none;
                 }
             }
         }
